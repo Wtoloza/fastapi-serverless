@@ -1,0 +1,56 @@
+{
+    // VSCode rules
+    "editor.tabSize": 2,
+    // Custom Folders
+    "material-icon-theme.folders.associations": {
+        ".code_quality": "Coverage",
+        "shemas": "Mjml",
+        "requirements": "Python",
+    },
+    // Custom Files
+    "material-icon-theme.files.associations": {
+        "*.txt": "Python-misc",
+    },
+    // Editor max line python
+    "[python]": {
+        "editor.rulers": [
+            {
+                "column": 80,
+                "color": "#4f9d0a"
+            },
+            {
+                "column": 140,
+                "color": "#ff0000"
+            },
+        ]
+    },
+    // Linter
+    "python.formatting.provider": "autopep8",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "${cwd}/.code_quality/.flake8",
+    "python.languageServer": "Pylance",
+    // Tests
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "--exitfirst",
+        "--verbose"
+    ],
+    // PythonPath
+    "python.poetryPath": "${cwd}/venv",
+    // Exclude files
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache/": true,
+        "**/venv": true,
+    },
+    // indent-rainbow: https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 2,
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.3)",
+        "rgba(127,255,127,0.3)",
+        "rgba(255,127,255,0.3)",
+        "rgba(79,236,236,0.3)"
+    ]
+}
