@@ -1,8 +1,8 @@
 from app.users.routes.base_user_router import user_router
 
 
-@user_router.delete(
+@user_router.get(
   path="/{id}"
 )
-def delete_user(id: str):
+def retrieve_user(id: str):
   pass
