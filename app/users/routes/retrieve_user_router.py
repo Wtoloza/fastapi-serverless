@@ -6,10 +6,10 @@ from app.users.dependencies import get_user
 
 
 @user_router.get(
-  path="/{id}"
+    path="/{id}"
 )
 def retrieve_user(
-  id: str = Path(...),
-  user: bool = Depends(get_user)
+    id: str = Path(...),
+    user: bool = Depends(get_user)
 ):
-  return {f"Test {id}": user}
+    return {f"Test {id}": user}
