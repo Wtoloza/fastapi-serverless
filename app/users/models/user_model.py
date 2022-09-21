@@ -1,5 +1,6 @@
 from enum import Enum
 from datetime import date
+from uuid import UUID, uuid4
 
 from pydantic import EmailStr
 from sqlmodel import SQLModel, Field
@@ -47,9 +48,11 @@ class UserUpdate(UserBase):
     phone_number: int | None = None
 
 
-class User(UserAuditor, UserBase):
-    id: str | None = Field(default=None, primary_key=True)
+class User(UserAuditor, UserBase, table=True):
+    id: UUID | None = Field(
+        primary_key=True, default_factory=uuid4, nullable=False
+    )
 
 
 class UserRead(UserBase):
-    id: str
+    id: UUID
