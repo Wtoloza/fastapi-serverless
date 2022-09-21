@@ -8,4 +8,5 @@ def get_app():
     app.include_router(user_router)
     return app
 
+
 app = get_app()
