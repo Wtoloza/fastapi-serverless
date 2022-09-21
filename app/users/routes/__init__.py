@@ -1,4 +1,3 @@
-import imp
 from app.users.routes.base_user_router import user_router
 
 from app.users.routes.get_users_router import get_users
