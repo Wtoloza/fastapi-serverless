@@ -37,12 +37,12 @@ class UserCreate(UserBase):
 
 
 class UserUpdate(UserBase):
-    first_name: str = Field(None, max_length=50)
+    first_name: str | None = Field(None, max_length=50)
     second_name: str | None = Field(None, max_length=50)
-    first_last_name: str = Field(None, max_length=50)
+    first_last_name: str | None = Field(None, max_length=50)
     second_last_name: str | None = Field(None, max_length=50)
-    document_type: DocumentType = None
-    document_number: int = None
+    document_type: DocumentType | None = None
+    document_number: int | None = None
     birth_date: date | None = None
     email: EmailStr | None = None
     phone_number: int | None = None

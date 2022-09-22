@@ -8,6 +8,7 @@ from app.users.routes import user_router
 # Tables
 from app.users.models import User
 
+
 def get_app():
     app = FastAPI()
     app.include_router(user_router)

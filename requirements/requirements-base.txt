@@ -2,3 +2,6 @@ fastapi
 sqlmodel
 uvicorn
 pydantic[email]
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
